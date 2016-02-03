@@ -69,7 +69,7 @@ public class CategoryScreen extends AppCompatActivity implements NavigationView.
 
         init();
 
-        // Checking Internet Connection
+//        Checking Internet Connection
         if (!ConnectionDetector.isConnectedToInternet(context)) {
             ConnectionDetector.checkInternetConnection(context);
         } else {
