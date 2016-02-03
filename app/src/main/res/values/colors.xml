@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1E824c</color>
+    <color name="colorPrimaryDark">#1E824c</color>
+    <color name="colorAccent">#78B494</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="signup_textColor">#3F51B5</color>
+    <color name="item_background">#DBDBDB</color>
+    <color name="item_stroke_color">#B1BCBE</color>
+    <color name="searchBar_layout_color">#FFFFFF</color>
+    <color name="category_searchBackground_color">#FFFFFF</color>
+    <color name="activity_background_color">#FFFFFF</color>
+    <color name="navbar_header_gradient_center_color">#4B9B70</color>
+    <color name="navbar_item_text_color">#3A3A3A</color>
+    <color name="button_background">#A5CDB7</color>
+    <color name="button_stroke_color">#3E9465</color>
+    <color name="edittext_hint_color">#C4C4C4</color>
+    <color name="signup_gradient_endColor">#FFFFFF</color>
+    <color name="signup_gradient_startColor">#26000000</color>
+    <color name="signup_button_stroke_color">#78B494</color>
+    <color name="search_text_color">#000000</color>
+</resources>

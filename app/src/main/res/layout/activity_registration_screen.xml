@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/actionBar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/signup_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/signin_title_marginTop"
+                android:layout_marginBottom="@dimen/text_margin_vertical"
+                android:textSize="@dimen/actionbar_title_size"
+                android:layout_centerHorizontal="true"/>
+
+            <EditText
+                android:id="@+id/userFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_name"
+                android:layout_below="@+id/signup_title"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textSize="@dimen/text_size"
+                android:textColorHint="@color/edittext_hint_color"
+                android:background="@drawable/detail_feild_background"
+                android:layout_marginRight="@dimen/edittext_margin_horizontal"
+                android:layout_marginLeft="@dimen/edittext_margin_horizontal" />
+            <EditText
+                android:id="@+id/userLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userFirstName"
+                android:hint="@string/last_name"
+                android:textSize="@dimen/text_size"
+                android:textColorHint="@color/edittext_hint_color"
+                android:singleLine="true"
+                android:inputType="text"
+                android:background="@drawable/detail_feild_background"
+                android:layout_marginRight="@dimen/edittext_margin_horizontal"
+                android:layout_marginLeft="@dimen/edittext_margin_horizontal"
+                android:layout_marginTop="@dimen/edittext_margin_vertical"/>
+
+            <EditText
+                android:id="@+id/registrationUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userLastName"
+                android:hint="@string/registration_username"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textSize="@dimen/text_size"
+                android:textColorHint="@color/edittext_hint_color"
+                android:background="@drawable/detail_feild_background"
+                android:layout_marginRight="@dimen/edittext_margin_horizontal"
+                android:layout_marginLeft="@dimen/edittext_margin_horizontal"
+                android:layout_marginTop="@dimen/edittext_margin_vertical"/>
+            <EditText
+                android:id="@+id/emailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/registrationUsername"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:hint="@string/email"
+                android:textSize="@dimen/text_size"
+                android:textColorHint="@color/edittext_hint_color"
+                android:background="@drawable/detail_feild_background"
+                android:layout_marginRight="@dimen/edittext_margin_horizontal"
+                android:layout_marginLeft="@dimen/edittext_margin_horizontal"
+                android:layout_marginTop="@dimen/edittext_margin_vertical"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailId"
+                android:inputType="textPassword"
+                android:hint="@string/registration_password"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size"
+                android:textColorHint="@color/edittext_hint_color"
+                android:background="@drawable/detail_feild_background"
+                android:layout_marginRight="@dimen/edittext_margin_horizontal"
+                android:layout_marginLeft="@dimen/edittext_margin_horizontal"
+                android:layout_marginTop="@dimen/edittext_margin_vertical"/>
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:inputType="textPassword"
+                android:hint="@string/confirm_password"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size"
+                android:textColorHint="@color/edittext_hint_color"
+                android:background="@drawable/detail_feild_background"
+                android:layout_marginRight="@dimen/edittext_margin_horizontal"
+                android:layout_marginLeft="@dimen/edittext_margin_horizontal"
+                android:layout_marginTop="@dimen/edittext_margin_vertical"
+                android:layout_marginBottom="@dimen/edittext_margin_vertical"/>
+
+            <LinearLayout
+                android:id="@+id/seller_buyer_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@+id/confirmPassword"
+                android:layout_marginRight="@dimen/edittext_margin_horizontal"
+                android:layout_marginLeft="@dimen/edittext_margin_horizontal"
+                android:layout_marginTop="@dimen/toggle_button_marginTop"
+                android:layout_marginBottom="@dimen/toggle_button_marginBottom">
+
+                <Button
+                    android:id="@+id/buyer_toggle_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selected_toggle_background"
+                    android:text="@string/buyer"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/selected_toggle_text_color" />
+
+                <Button
+                    android:id="@+id/seller_toggle_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@drawable/selected_toggle_text_color"
+                    android:text="@string/seller"
+                    android:textAllCaps="false"
+                    android:background="@drawable/selected_toggle_background"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/registrationButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@+id/seller_buyer_layout"
+                android:background="@drawable/signup_button_background"
+                android:layout_marginTop="@dimen/button_vertical_margin"
+                android:layout_marginRight="@dimen/button_horizontal_margin"
+                android:layout_marginLeft="@dimen/button_horizontal_margin"
+                android:layout_marginBottom="@dimen/button_vertical_margin"
+                android:text="@string/signup"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

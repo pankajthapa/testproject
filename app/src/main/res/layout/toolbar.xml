@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/actionbar_title_size"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorPrimary"
+            android:layout_height="wrap_content"/>
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/searchbar_layout_background"
+        android:layout_margin="0dp"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/searchBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/searchbar_horizontal_margin"
+            android:layout_marginRight="@dimen/searchbar_horizontal_margin"
+            android:background="@mipmap/ic_action_back"/>
+        <EditText
+            android:id="@+id/toolbar_searchBox"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="@string/search_text_hint"
+            android:layout_height="?attr/actionBarSize"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/search_text_color"
+            android:textColorHint="@color/edittext_hint_color"
+            android:paddingLeft="@dimen/edittext_padding_horizontal"
+            android:paddingRight="@dimen/edittext_padding_horizontal"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:id="@+id/search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/searchbar_horizontal_margin"
+            android:layout_marginRight="@dimen/searchbar_horizontal_margin"
+            android:src="@mipmap/ic_action_remove"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/searchedItemsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/activity_background_color" />
+
+</android.support.design.widget.AppBarLayout>

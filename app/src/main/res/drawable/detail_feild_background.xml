@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/windowBackground"/>
+    <stroke android:width="1dip" android:color="@color/colorPrimary" />
+    <padding android:top="@dimen/edittext_padding_vertical"
+        android:bottom="@dimen/edittext_padding_vertical"
+        android:left="@dimen/edittext_padding_horizontal"
+        android:right="@dimen/edittext_padding_horizontal"/>
+
+</shape>
